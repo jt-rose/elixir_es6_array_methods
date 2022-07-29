@@ -59,3 +59,8 @@ IO.puts "FindIndex: #{inspect(res4)}"
 IO.puts "Some: #{inspect(res5)}"
 IO.puts "Every: #{inspect(res6)}"
 IO.puts "Reduce: #{inspect(res7)}"
+
+
+# :)
+res8 = [1,2,3,4,5,6] |> ArrayMethods.filter |> ArrayMethods.map |> ArrayMethods.reduce
+IO.puts "Chain: #{inspect(res8)}"
