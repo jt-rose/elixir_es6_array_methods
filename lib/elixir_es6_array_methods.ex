@@ -20,27 +20,27 @@ defmodule ArrayMethods do
 
   def find(array) do
     # find even
-    Enum.find(array, fn x -> rem(x, 2) == 0 end)
+    array |> Enum.find(&is_even/1)
   end
 
   def findIndex(array) do
     # find first even number
-    Enum.find_index(array, fn x -> rem(x, 2) == 0 end)
+    array |> Enum.find_index(&is_even/1)
   end
 
   def some(array) do
     # find if any of the numbers are even
-    Enum.any?(array, fn x -> rem(x, 2) == 0 end)
+    array |> Enum.any?(&is_even/1)
   end
 
   def every(array) do
     # find if all numbers are even
-    Enum.all?(array, fn x -> rem(x, 2) == 0 end)
+    array |> Enum.all?(&is_even/1)
   end
 
   def reduce(array) do
     # get sum of all numbers
-    Enum.sum(array)
+    array |> Enum.sum
   end
 end
 
